@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<style>
+    body {
+        font-family: system-ui, sans-serif;
+    }
+
+    .banner {
+        display: flex;
+        width: 100%;
+        max-width: 90vw;
+        overflow-x: hidden;
+        border-color: black;
+        border-style: solid;
+        border-radius: 10px;
+    }
+
+    .banner-info-container {
+        display: flex;
+        flex-direction: column;
+        padding-left: 15px;
+        flex: 0 0 40%;
+        border-color: grey;
+        border-style: solid;
+    }
+
+    .banner-supplier-logo {
+        height: 40px;
+        padding-top: 15px;
+        align-self: flex-start;
+    }
+
+    .banner-button {
+        border-style: solid;
+        border-color: blue;
+        border-radius: 10px;
+        border-width: 3px;
+        padding: 10px;
+        font-size: medium;
+        font-weight: bolder;
+        color: blue;
+        background-color: transparent;
+    }
+
+    .product-container {
+        display: flex;
+        position: relative;
+        border-width: 2px;
+        border-color: grey;
+        border-style: solid;
+        flex: 1;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 2px;
+        padding: 5px;
+    }
+
+    .product-card {
+        display: flex;
+        border-width: 2px;
+        border-color: grey;
+        border-style: solid;
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .product-img {
+        height: 150px;
+        padding-top: 5px;
+        padding-bottom: 15px;
+    }
+
+    .product-price {
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 8px;
+        font-size: x-large;
+    }
+
+    .product-text {
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 45px;
+        padding-left: 8px;
+        font-size: medium;
+    }
+
+    .product-button {
+        border-style: solid;
+        border-color: blue;
+        border-radius: 5px;
+        border-width: 1px;
+        padding: 10px;
+        margin-top: 0;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        font-size: small;
+        font-weight: bold;
+        color: white;
+        background-color: blue;
+    }
+
+/* Common styling for both previous and next navigation buttons */
+.prev, .next {
+    position: absolute; /* Absolute positioning within the slider container */
+    top: 50%; /* Centers the button vertically */
+    transform: translateY(-50%); /* Offsets the button position by half its height */
+    background-color: white; /* Semi-transparent black background */
+    color: blue; /* White color for the arrow icons */
+    border: 2px solid blue; /* Removes default button borders */
+    border-color: blue;
+    font-weight: lighter;
+    font-size: x-large;
+    width: 40px; /* Fixed width for the buttons */
+    height: 40px; /* Fixed height for the buttons */
+    cursor: pointer; /* Changes the cursor to pointer on hover */
+    z-index: 10; /* Ensures buttons appear above the slider content */
+    border-radius: 50%; /* Makes the buttons round */
+    transition: background-color 0.3s ease; /* Smooth transition for background color on hover */
+    display: flex; /* Enables flexbox for centering the arrow inside the button */
+    justify-content: center; /* Centers arrow horizontally */
+    align-items: center; /* Centers arrow vertically */
+    padding: 0; /* Removes any default padding */
+}
+
+/* Positioning the previous button to the left */
+.prev {
+    left: 10px; /* Positions the button 10px from the left edge */
+}
+
+/* Positioning the next button to the right */
+.next {
+    right: 10px; /* Positions the button 10px from the right edge */
+}
+
+.prev:hover, .next:hover {
+    font-weight: bold; /* Darkens the button background on hover */
+}
+</style>
+
+<body>
+
+    <!-- main container -->
+    <div class="banner">
+
+        <!-- banner text -->
+        <div class="banner-info-container">
+            <div>
+                <img src="https://skai.io/wp-content/uploads/2023/06/Epsilon-retail-Media_Logo_light-green-500x209.png"
+                    class="banner-supplier-logo">
+            </div>
+            <div>
+                <h2 style="margin-bottom:0; padding-bottom: 5px;">Headline Text</h2>
+                <h3 style="margin-top:0; padding-top: 0;">Subtext</h3>
+                <button type="button" class="banner-button">SHOP ALL</button>
+                <br>
+            </div>
+            <p style="padding-top: 10px; margin-top: auto; font-size: x-small;">Sponsored</p>
+        </div>
+
+        <!-- banner carousel -->
+        <div class="product-container">
+
+            <!-- img 1 -->
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/81Xezm8jhwL.jpg" class="product-img">
+                <p class="product-price"><sup>$</sup>109<sup>99</sup></p>
+                <p class="product-text">Tablet 1</p>
+                <button type="click" class="product-button">ADD TO CART</button>
+            </div>
+
+            <!-- img 2 -->
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71TRlNPprvL.jpg" class="product-img">
+                <p class="product-price"><sup>$</sup>99<sup>99</sup></p>
+                <p class="product-text">Tablet 2</p>
+                <button type="click" class="product-button">ADD TO CART</button>
+            </div>
+
+            <button class="prev">&#8592;</button>
+            <button class="next">&#8594;</button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
